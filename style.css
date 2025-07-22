@@ -46,3 +46,156 @@ h1 {
   opacity: 0.6;
   pointer-events: none;
 }
+
+
+
+
+/* === Estilo Profesional Mejorado === */
+
+/* Transición suave para el tachado */
+.ramo label {
+  transition: all 0.25s ease-in-out;
+}
+
+/* Hover en los ramos para mostrar interacción */
+.ramo:hover {
+  transform: scale(1.01);
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Efecto al hacer check (tachado) */
+input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+  color: #d26ea0 !important;
+  opacity: 0.7;
+  transform: scale(0.98);
+}
+
+/* Animación suave al mostrar un semestre */
+.semestre {
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.semestre:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Animación de entrada para cada semestre */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.semestre {
+  animation: fadeSlideIn 0.4s ease;
+}
+
+/* Suavizado de texto */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* === ESTILO BRUTAL Y PROFESIONAL === */
+
+/* Fuente moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #ffdee9, #f9c6d3);
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+/* Efecto glassmorphism en cada semestre */
+.semestre {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 24px;
+  animation: fadeIn 0.6s ease-in-out both;
+}
+
+/* Animación brutal de entrada */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Animación al pasar el mouse */
+.ramo:hover {
+  transform: scale(1.02);
+  transition: transform 0.2s ease;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+/* Checkbox personalizado */
+input[type="checkbox"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #e573b5;
+  border-radius: 4px;
+  margin-right: 8px;
+  position: relative;
+  top: 4px;
+  transition: all 0.2s ease;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #e573b5;
+  border-color: #e573b5;
+}
+
+input[type="checkbox"]:checked::after {
+  content: '✔';
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  left: 3px;
+  top: 0px;
+}
+
+/* Texto de ramo tachado elegante */
+input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+  color: #d26ea0 !important;
+  opacity: 0.6;
+}
+
+/* Títulos con gradiente animado */
+h1, h2, h3 {
+  background: linear-gradient(to right, #ff8ec7, #e65d8c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
