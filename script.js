@@ -199,8 +199,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
- 
+  // Esperar a que el DOM cargue completamente y la malla se construya
   setTimeout(() => {
     iniciarObservadores();
-  }, 500);
+  }, 500); // tiempo suficiente para generar dinámicamente
 });
