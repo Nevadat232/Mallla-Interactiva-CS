@@ -1,0 +1,48 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff0f5;
+  color: #4b0082;
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+  color: #c71585;
+}
+#malla-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.semestre {
+  border: 2px solid #c71585;
+  border-radius: 10px;
+  padding: 15px;
+  background: #ffe6f0;
+}
+.semestre h2 {
+  text-align: center;
+  color: #8b008b;
+}
+.ramo {
+  background: #ffc0cb;
+  border: 1px solid #c71585;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.ramo:hover {
+  background: #ffb6c1;
+}
+.ramo.completado {
+  background: #d3d3d3;
+  text-decoration: line-through;
+  color: #555;
+}
+.ramo.bloqueado {
+  background: #f4c2c2;
+  opacity: 0.6;
+  pointer-events: none;
+}
